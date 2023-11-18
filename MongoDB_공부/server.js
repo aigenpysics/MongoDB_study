@@ -9,7 +9,6 @@ app.use(express.static(__dirname + '/public'))
 //ejs 셋팅
 app.set('view engine', 'ejs')
 
-
 const { MongoClient } = require('mongodb')
 
 let db
@@ -55,7 +54,6 @@ app.get('/list', async(request, response) =>{
 app.get('/time', async(req,res) => {
    res.render('time.ejs', {data : new Date()})
 })
-
 
 //<%- 기능으로 가져옴.
 //<%= 문자열로 가져옴.
